@@ -8,9 +8,9 @@ $gpio->setup(17, "out");
 while(true) {
 	echo "Turning on pin 17\n";
 	$gpio->output(17, 1);
-	sleep(0.5 * 1000000);
+	usleep(0.5 * 1000000);
 	
 	echo "Turning off pin 17\n";
 	$gpio->output(17, 0);
-	sleep(0.5 * 1000000);
+	usleep(0.5 * 1000000);
 }
