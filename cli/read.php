@@ -8,9 +8,10 @@ $gpio->setup(18, "in");
 
 while(true) {
 	$gpio->output(17, rand(0, 1));
+
+	$state = ($gpio->input(18) == 1)?'on':'off';
 	
-	$state = $gpio->input(18);
-	echo 'LED is '.($state)?'on':'off'."\n";
+	echo "LED is $state.\n";
 	
-	sleep(0.5 * 1000000);
+	sleep(2);
 }
