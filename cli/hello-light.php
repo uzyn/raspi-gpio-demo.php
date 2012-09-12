@@ -1,6 +1,6 @@
 #!/usr/bin/php
 <?php
-require_once(dirname(dirname(__FILE__)).'/PHP-GPIO/GPIO.php') ;
+require_once(dirname(dirname(__FILE__)).'/PHP-GPIO/GPIO.php');
 
 echo "Setting up pin 17\n";
 $gpio = new GPIO();
