@@ -2,7 +2,7 @@
 <?php
 require_once(dirname(dirname(__FILE__)).'/PHP-GPIO/GPIO.php');
 
-$leds = array(4, 17, 18);
+$leds = array(22, 17, 18);
 
 $gpio = new GPIO();
 
