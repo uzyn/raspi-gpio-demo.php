@@ -6,9 +6,11 @@ $button = 23;
 
 $gpio = new GPIO();
 
+/* Setting up would reset the LED to 0
 foreach ($leds as $led) {
-//	$gpio->setup($led, "in");
+	$gpio->setup($led, "in");
 }
+*/
 $gpio->setup($button, "in");
 
 $status = array();
@@ -32,3 +34,5 @@ function onOff($in) {
 	<?php endfor; ?>
 	
 </ol>
+
+<h2>Push button is <?php echo onOff($gpio->input($button)); ?></h2>
