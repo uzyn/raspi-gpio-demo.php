@@ -17,19 +17,18 @@ foreach ($leds as $i => $led) {
 }
 
 function onOff($in) {
-	if ($in) return 'on';
+	if ($in == 1) return 'on';
 	else return 'off';
 }
 ?>
 <h1>Welcome to my RasPi</h1>
 
 <h2>LEDs are:</h2>
-
 <ol>
 	<?php for ($i = 0; $i < 3; ++$i): ?>
-		<li><?php onOff($status['leds'][$i]); ?></li>
+		<li><?php echo onOff($status['leds'][$i]); ?> 
+			(<a href="control.php?led=<?php echo $i; ?>&on=<?php echo $status['leds'][$i]; ?>">toggle</a>)
+		</li>
 	<?php endfor; ?>
 	
 </ol>
-
-<?php print_r($status); ?>
