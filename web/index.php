@@ -7,7 +7,7 @@ $button = 23;
 $gpio = new GPIO();
 
 foreach ($leds as $led) {
-	$gpio->setup($led, "in");
+//	$gpio->setup($led, "in");
 }
 $gpio->setup($button, "in");
 
@@ -27,7 +27,7 @@ function onOff($in) {
 <ol>
 	<?php for ($i = 0; $i < 3; ++$i): ?>
 		<li><?php echo onOff($status['leds'][$i]); ?> 
-			(<a href="control.php?led=<?php echo $i; ?>&on=<?php echo $status['leds'][$i]; ?>">toggle</a>)
+			(<a href="control.php?led=<?php echo $i; ?>&on=<?php echo ($status['leds'][$i] == 1)?'0':'1'; ?>">toggle</a>)
 		</li>
 	<?php endfor; ?>
 	
