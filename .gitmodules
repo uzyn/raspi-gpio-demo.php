@@ -1,0 +1,3 @@
+[submodule "PHP-GPIO"]
+	path = PHP-GPIO
+	url = git://github.com/pickley/PHP-GPIO.git
